@@ -18,9 +18,9 @@ namespace Working_With_Twilio
             TwilioClient.Init(accountSid, authToken);
 
             var message = MessageResource.Create(
-                body: "Hi there!",
-                from: new Twilio.Types.PhoneNumber(""),
-                to: new Twilio.Types.PhoneNumber(Environment.GetEnvironmentVariable(""))
+                body: "Hi there! :)",
+                from: new Twilio.Types.PhoneNumber(Environment.GetEnvironmentVariable("TWILIONUM")),
+                to: new Twilio.Types.PhoneNumber(Environment.GetEnvironmentVariable("MY_PHONE_NUMBER"))
             );
 
             Console.WriteLine(message.Sid);
